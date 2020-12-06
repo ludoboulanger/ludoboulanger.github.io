@@ -1,15 +1,103 @@
-body {
-  background-color: #1B2328;
+:root {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  --text-dark: #252729;
+  --text-light: gainsboro;
+  --background-primary: #252729;
+  --background-secondary: #000000;
+  text-align: justify;
 }
 
+/* Body */
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--text-dark);
+}
+
+/*Main*/
+
+main {
+  padding: 1rem;
+}
+
+/* Header */
 .header-section {
   text-align: center;
 }
 
-.primary-text {
-  color: gainsboro;
+/* nav */
+.nav-button {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.svg-icon {
+  width: 2rem;
+  height: 2rem;
 }
 
-.secondary-text {
-  color: gainsboro;
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: var(--background-primary);
+  transition-property: fill;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.svg-icon circle {
+  stroke: var(--background-primary);
+  stroke-width: 1;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background-color: var(--background-primary);
+  margin-top: -19.92px;
+  transition-property: width;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  overflow: hidden;
+}
+
+.nav-ul {
+  list-style-type: none;
+  padding-left: 4px;
+  position: relative;
+  top: 3.2rem;
+}
+
+.nav-item {
+  padding: 12px 0;
+}
+
+.nav-item a {
+  color: var(--text-light);
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+}
+
+.nav-link {
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
 }
