@@ -37,7 +37,7 @@ main {
 
 /* nav */
 .nav-button {
-  position: fixed;
+  position: absolute;
   top: 1.2rem;
   right: 1.2rem;
   cursor: pointer;
@@ -64,15 +64,10 @@ main {
 
 nav {
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   right: 0;
   width: 0;
   height: 100vh;
   background-color: var(--background-primary);
-  margin-top: -19.92px;
   transition-property: width;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -80,14 +75,29 @@ nav {
 }
 
 .nav-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   list-style-type: none;
-  padding-left: 4px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
   position: relative;
   top: 3.2rem;
 }
 
 .nav-item {
+  width: 100%;
+  text-align: center;
   padding: 12px 0;
+  transition-property: background-color;
+  transition-duration: 0.9s;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: #000000;
 }
 
 .nav-item a {
@@ -96,8 +106,35 @@ nav {
   text-decoration: none;
 }
 
+.nav-item:last-child {
+  margin-top: auto;
+  padding: 0;
+  margin-bottom: 72px;
+  background-color: var(--background-primary);
+}
+
 .nav-link {
   overflow: hidden;
   white-space: nowrap;
   text-align: center;
+}
+
+.lang-toggle {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.lang-button {
+  border: 2px solid gainsboro;
+  border-radius: 4px;
+  background-color: var(--background-primary);
+  color: gainsboro;
+  text-align: center;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+
+.lang-toggle {
+  margin-top: auto;
 }

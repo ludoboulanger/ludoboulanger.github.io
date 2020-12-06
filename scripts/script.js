@@ -1,12 +1,17 @@
 const toggleSideBar = () => {
   const sidebar = document.getElementById('sidebar');
-  const icon = document.getElementById('navBarIconPath');
+  const iconPath = document.getElementById('navBarIconPath');
+  const icon = document.getElementById('navBarIcon')
 
   if (sidebar.style.width === '') {
     sidebar.style.width = '10rem';
-    icon.style.fill = "gainsboro";
+    sidebar.style.boxShadow = '-4px 0 7px black';
+    iconPath.style.fill = "gainsboro";
+    icon.style.position = 'fixed';
+
   } else {
     sidebar.style.width = '';
-    icon.style.fill = " #252729";
+    iconPath.style.fill = " #252729";
+    icon.style.position = 'absolute';
   }
 };
