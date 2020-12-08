@@ -6,7 +6,8 @@
 
     <title>Who Is Ludovic</title>
 
-    <link rel="stylesheet" type="text/css" href="ressources/styles.css" /> 
+    <link rel="stylesheet" type="text/css" href="ressources/styles.css" />
+    <link rel="stylesheet" type="text/css" href="ressources/animations.css" /> 
 
     <meta charset="UTF-8">
     <meta name="description" content="Personal Portfolio">
@@ -25,63 +26,58 @@
     <header>
 
       <svg
-        id='navBarIcon'
-        class="svg-icon nav-button" 
-        viewBox="0 0 20 20"
-        onclick="toggleSideBar()"
-      >
-        <path 
-          id="navBarIconPath"
-          fill="none"
-          d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314
-          c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743
-          s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314
-          c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
-      </svg>
+          id='hamburger-menu'
+          class="svg-icon nav-icon" 
+          viewBox="0 0 20 20"
+        >
+          <path 
+            id="navBarIconPath"
+            fill="none"
+            d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314
+            c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743
+            s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314
+            c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+        </svg>
 
-      <nav id="sidebar">
-        <ul class="nav-ul">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <span>About me</span>
-            </a>
-          </li>
+        <section id="header" class="header-bar">
+          <p class="text-light">Who is Ludovic Boulanger?</p>
+        </section>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <span>Projects</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <span>Technologies</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <span>Contact</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <div class="lang-toggle">
-              <button class="lang-button">En</button>
-              &nbsp; <span style="color: gainsboro;">|</span> &nbsp;
-              <button class="lang-button">Fr</button>
-            </div>
-          </li>
-
-        </ul>
-      </nav>
+        <nav  id="navbar">
+          <ul class="nav-ul" id="navbar-ul">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                About Me
+              </a>
+            </li>
+  
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Projects
+              </a>
+            </li>
+  
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Technologies
+              </a>
+            </li>
+  
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+               Contact
+              </a>
+            </li>
+  
+          </ul>
+        </nav>
 
     </header>
 
     <main>
 
-      <section class="header-section text-dark">
-        <h1 class="primary-text text-dark" >Who is Ludovic Boulanger?</h1>
+      <section class="title-section">
+        <h1>Who is Ludovic Boulanger</h1>
         <p class="secondary-text text-dark" >Welcome to my personal portfolio</p>
       </section>
 
