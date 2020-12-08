@@ -27,7 +27,6 @@ const createFixedHeader = () => {
     toggleNavItemColor();
     header.classList.remove('header-bar-fadeOut');
     header.classList.add('header-bar-fadeIn');
-    header.style.boxShadow = '0 -4px 7px black';
     iconPath.style.fill = "gainsboro";
 
   } else {
