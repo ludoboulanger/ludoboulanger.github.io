@@ -39,14 +39,16 @@ const createFixedHeader = () => {
 };
 
 const toggleNavItemColor = () => {
+  const root = document.querySelector(':root');
   const navbar = document.getElementById('navbar-ul');
 
   for (child of navbar.children) {
     if (isHeaderHidden && !isNavbarHidden) {
-      console.log(child.children);
-      child.children[0].style.color = 'var(--text-dark)';
+      child.children[0].className = 'text-dark';
+      root.style.setProperty('--underline-color', '#252729');
     } else if (!isNavbarHidden) {
-      child.children[0].style.color = 'var(--text-light)';
+      child.children[0].className = 'text-light';
+      root.style.setProperty('--underline-color', 'gainsboro');
     }
   }
 }

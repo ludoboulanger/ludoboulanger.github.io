@@ -1,6 +1,7 @@
 :root {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  --underline-color: #252729;
   --text-dark: #252729;
   --text-light: gainsboro;
   --background-primary: #252729;
@@ -9,15 +10,34 @@
 }
 
 /* Typography */
-.nav-link {
+#nav-link {
+  position: relative;
   text-decoration: none;
   overflow: hidden;
   white-space: nowrap;
   font-style: italic;
 }
 
+#nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--underline-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#nav-link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 .text-light {
-  color: gainsboro;
+  color: var(--text-light);
   font-style: italic;
 }
 
